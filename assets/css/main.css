@@ -703,3 +703,99 @@ body {
     text-align: center;
   }
 }
+.page__about {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-image: url('../img/bg-about-mobile.png');
+  background-color: #080809;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.page__about .title {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+.page__about .title h2 {
+  font: 700 42px 'Saira', sans-serif;
+  color: #4030FF;
+}
+.page__about .title img {
+  width: fit-content;
+}
+.page__about .cards {
+  display: flex;
+  gap: 20px;
+}
+.page__about .cards .card__person {
+  position: relative;
+  background-color: #080809;
+  padding: 30px;
+  max-width: 268px;
+  box-shadow: 0 0 10px rgba(48, 255, 255, 0.6);
+}
+.page__about .cards .card__person .detail__top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.page__about .cards .card__person .detail__bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.page__about .cards .card__person .photo__card {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 20px;
+}
+.page__about .cards .card__person h3 {
+  font: 600 24px 'Saira', sans-serif;
+  color: #F5F5F5;
+  margin-bottom: 5px;
+}
+.page__about .cards .card__person .text__card {
+  font: 400 16px 'Saira', sans-serif;
+  color: #F5F5F5;
+}
+.page__about .content {
+  position: relative;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+.page__about .content .detail__top {
+  position: absolute;
+  top: -77px;
+  left: -21px;
+  z-index: 1;
+}
+.page__about .content .detail__bottom {
+  position: absolute;
+  bottom: -85px;
+  right: 0;
+  z-index: 1;
+}
+.page__about .content .text__content {
+  font: 400 18px 'Saira', sans-serif;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #F5F5F5;
+  max-width: 402px;
+  position: relative;
+  z-index: 2;
+}
+.page__about .content .text__content span {
+  color: #30FFFF;
+}
+@media screen and (min-width: 768px) {
+  .page__about {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: url('../img/bg-about.png');
+  }
+  .page__about .title {
+    margin-bottom: 60px;
+  }
+}

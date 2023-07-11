@@ -106,3 +106,116 @@
         }
     }
 }
+
+.page__about {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-image: url('../img/bg-about-mobile.png');
+    background-color: #080809;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+
+        h2 {
+            font: 700 42px @fontS;
+            color: #4030FF;
+        }
+
+        img {
+            width: fit-content;
+        }
+    }
+
+    .cards {
+        display: flex;
+        gap: 20px;       
+
+        .card__person {
+            position: relative;
+            background-color: #080809;
+            padding: 30px;
+            max-width: 268px;
+            box-shadow: 0 0 10px rgba(48, 255, 255, 0.6);
+
+            .detail__top {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+
+            .detail__bottom {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+
+            .photo__card {
+                position: relative;
+                z-index: 2;
+                margin-bottom: 20px;
+            }
+
+            h3 {
+                font: 600 24px @fontS;
+                color: #F5F5F5;
+                margin-bottom: 5px;
+            }
+
+            .text__card {
+                font: 400 16px @fontS;
+                color: #F5F5F5;
+            }
+        }
+    }
+
+    .content {
+        position: relative;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+
+        .detail__top {
+            position: absolute;
+            top: -77px;
+            left: -21px; 
+            z-index: 1;   
+        }
+
+        .detail__bottom {
+            position: absolute;
+            bottom: -85px;
+            right: 0;
+            z-index: 1;
+        }
+
+        .text__content {
+            font: 400 18px @fontS;
+            letter-spacing: 1px;
+            text-align: center;
+            color: #F5F5F5;
+            max-width: 402px;
+            position: relative;
+            z-index: 2;
+
+            span {
+                color: #30FFFF;
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background-image: url('../img/bg-about.png');
+
+        .title {
+            margin-bottom: 60px;
+        }
+    }
+}
