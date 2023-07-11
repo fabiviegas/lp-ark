@@ -229,7 +229,7 @@
 
     .content {
         align-items: center;
-        
+
         .text {
             font: 700 42px @fontE;
             color: #080809;
@@ -258,3 +258,96 @@
         }
     }
 }
+
+.page__contact {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #080809;
+
+    .title {
+        display: flex;        
+        align-items: center;
+
+        h2 {
+            font: 700 42px @fontS;
+            color: #30FFFF;
+            text-align: center;  
+            margin-right: 6px;  
+            margin-bottom: 5px;        
+        }
+    }
+
+    p {
+        font: 400 16px @fontS;
+        color: #F5F5F5;
+        margin-bottom: 60px;
+    }
+
+    .form__standard {
+        .data {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"] {
+                padding: 20px 30px;
+                width: 100%;
+                background-color: #F5F5F5;
+                border-radius: 10px;
+                font: 400 18px @fontS;
+                color: black;
+                border: 1px solid transparent;
+                caret-color: #080809;
+                
+                &:hover {
+                    border-color: rgba(0, 255, 255, 0.671);
+                    outline: 1px solid transparent;
+                } 
+
+                &::placeholder {
+                    font: 400 18px @fontS;
+                    color: #4d4d4d;
+                }
+            }
+        }
+
+        .message {
+            
+            textarea {
+                padding: 20px 30px;
+                width: 100%;
+                background-color: #F5F5F5;
+                border-radius: 10px;
+                font: 400 18px @fontS;
+                color: black;
+                border: 1px solid transparent;
+                caret-color: #080809;
+                margin-bottom: 10px;
+                
+                &:hover {
+                    border-color: rgba(0, 255, 255, 0.671);
+                    outline: 1px solid transparent;
+                } 
+
+                &::placeholder {
+                    font: 400 18px @fontS;
+                    color: #4d4d4d;
+                }
+            }
+        }
+
+        .button {
+            border: none;
+            width: 100%;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+}
+
+
