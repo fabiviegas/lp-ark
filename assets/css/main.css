@@ -337,15 +337,20 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
   }
   .page__footer .footer__content .nav {
     align-items: flex-start;
+    width: 180px;
   }
   .page__footer .footer__content .nav a {
     text-align: left;
   }
   .page__footer .footer__content .social {
     flex-direction: column;
+    align-items: flex-end;
+    width: 180px;
   }
 }
 .page__footer .footer__copyrights {
