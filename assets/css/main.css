@@ -137,7 +137,9 @@ body {
 @media screen and (min-width: 768px) {
   .page__header h1 {
     margin-left: 0;
-    width: fit-content;
+  }
+  .page__header h1 a img {
+    max-width: 140px;
   }
 }
 .page__header .is--desktop {
@@ -247,21 +249,44 @@ body {
   align-items: center;
   justify-content: center;
   background-image: linear-gradient(90deg, #30ffff, #4030ff);
-  font: 700 32px 'Exo 2', sans-serif;
+  font: 700 28px 'Exo 2', sans-serif;
   text-transform: uppercase;
   color: #080809;
   padding: 22px 52px;
   border-radius: 20px;
   width: fit-content;
+  transition: all linear 0.15s;
 }
 .btn__cyanblue i {
-  font-size: 45px;
-  margin-right: 30px;
+  font-size: 40px;
+  margin-right: 20px;
 }
 .btn__cyanblue:hover {
   background-image: linear-gradient(270deg, #30ffff, #4030ff);
   color: #f5f5f5;
   cursor: pointer;
+}
+.btn__black {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #080809;
+  border-radius: 20px;
+  width: fit-content;
+  height: fit-content;
+  text-transform: uppercase;
+  font: 700 28px 'Exo 2', sans-serif;
+  color: #F5F5F5;
+  padding: 22px 42px;
+  transition: all linear 0.15s;
+}
+.btn__black img {
+  width: fit-content;
+  margin-right: 20px;
+}
+.btn__black:hover {
+  background-color: #1E1E9B;
+  color: white;
 }
 .page__footer {
   background-color: #f7f7f6;
@@ -797,5 +822,37 @@ body {
   }
   .page__about .title {
     margin-bottom: 60px;
+  }
+}
+.page__cta {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-image: url('../img/bg-cta-mobile.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.page__cta .content {
+  align-items: center;
+}
+.page__cta .content .text {
+  font: 700 42px 'Exo 2', sans-serif;
+  color: #080809;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.page__cta .content .button {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .page__cta {
+    background-image: url('../img/bg-cta.png');
+  }
+  .page__cta .content .text {
+    margin-bottom: 0;
+    text-align: left;
+  }
+  .page__cta .content .button {
+    justify-content: flex-end;
   }
 }
