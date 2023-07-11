@@ -2,28 +2,25 @@
 
 @import "../base/_pallete.less";
 
-@space_cadet: rgb(25, 29, 54);
-@lime_green: rgb(42, 204, 30);
-@oxford_blue: rgb(19, 23, 45);
-
 .button__whatsapp--floating {
     display: inline-block;
     z-index: 5000;
     position: fixed;
     bottom: 5px;
     right: 9px;    
-    padding: 7px 12px;
-    background-color: @lime_green;
-    color: @oxford_blue;
+    padding: 8px 12px;
+    border-radius: 100%;
+    border: 1px solid #1e1e9b;
+    background-image: linear-gradient(90deg, rgb(48, 255, 255), rgb(64, 48, 255));
     
     i {
         font-size: 36px;
-        color: @space_cadet;
+        color: #080809
     }
     
     &:hover {
         i {
-            color: #FFFFFF;
+            color: #F5F5F5;
         }
     }
 }

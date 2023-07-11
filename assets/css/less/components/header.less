@@ -10,15 +10,16 @@
 
     h1 {
         margin-left: 15px;
+
+        a {
+            img {
+                max-width: 140px;
+            }
+        }
         
         @media screen and (min-width: 768px) {
-            margin-left: 0;
+            margin-left: 0;           
             
-            a {
-                img {
-                    max-width: 140px;
-                }
-            }
         }
     }
 
@@ -35,7 +36,7 @@
                 width: 400px;
 
                 .menu__link {
-                    font: 500 18px @fontS;
+                    font: 500 16px @fontS;
                     color: #F5F5F5;
 
                     .--transition();
@@ -80,7 +81,7 @@
         }
 
         .navbar__overlay {
-            background-color: rgb(9, 45, 35);
+            background-color: #080809;            
             z-index: 3001;
             display: none;
         
@@ -106,13 +107,12 @@
                         margin: 30px 30px 106px 30px;
 
                         .overlay__logo {
-                            width: 155px; 
+                            width: 100px; 
                         }
                         
-                        .overlay__close {
-                            
+                        .overlay__close {                            
                             font-size: 30px;
-                            color: white;
+                            color: #30FFFF;
                         }
                     }
 
@@ -131,6 +131,11 @@
                         .overlay__button {
                             margin-top: 40px;
                             margin-bottom: 76px;
+
+                            i {
+                                font-size: 20px;
+                                color:#080809;
+                            }
                         }
 
                         .overlay__social {
@@ -139,7 +144,7 @@
                             a {
                                 text-decoration: none;
                                 font-size: 23px;
-                                color: rgb(222, 183, 143);
+                                color: #30FFFF;
                                 cursor: pointer;
                             }
                         }

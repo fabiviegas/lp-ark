@@ -9,7 +9,7 @@
     padding-top: 220px;
 
     h2 {
-        font: 700 48px @fontS;
+        font: 700 40px @fontS;
         color: #F5F5F5;
         text-align: center;
         line-height: 60px;
@@ -31,14 +31,19 @@
         }
     }
 
+    @media screen and (min-width: 768px) {
+        h2 {
+            font-size: 48px;
+        }
+    }
 } 
 
 .page__services {
     background-image: url('../img/bg-services.png');
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 100px;
-    padding-bottom: 70px;
+    padding-top: 60px;
+    padding-bottom: 40px;
 
     .title {
         display: flex;
@@ -53,17 +58,18 @@
         }
     }
 
-    .is--desktop {
+    .cards__services.is--desktop {
         display: none;
 
         @media screen and (min-width: 768px) {
             display: flex;
-            margin-right: 80px;
-            margin-left: 80px;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;         
 
             .cards {
                 display: flex;
-                justify-content: center;
+                justify-content: center;                
 
                 .card__wrap {
                     background-image: linear-gradient(200deg, rgb(48, 255, 255), rgb(64, 48, 255));
@@ -105,6 +111,11 @@
             }
         }
     }
+
+    @media screen and (min-width: 768px) {
+        padding-top: 100px;
+        padding-bottom: 70px;
+    }
 }
 
 .page__about {
@@ -131,80 +142,91 @@
         }
     }
 
-    .cards {
+    .about__wrapper {
         display: flex;
-        gap: 20px;       
+        flex-direction: column-reverse;
+        align-items: center;
 
-        .card__person {
+        .cards__about {
+            display: flex;  
+            flex-direction: column;          
+            gap: 20px;                
+
+            .card__person {
+                position: relative;
+                background-color: #080809;
+                padding: 20px;
+                max-width: 235px;
+                max-height: 377px;
+                box-shadow: 0 0 10px rgba(48, 255, 255, 0.6);
+
+                .detail__top {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                }
+
+                .detail__bottom {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                }
+
+                .photo__card {
+                    position: relative;
+                    z-index: 2;
+                    margin-bottom: 20px;
+                    width: 192px;
+                }
+
+                h3 {
+                    font: 600 20px @fontS;
+                    color: #F5F5F5;
+                    margin-bottom: 5px;
+                }
+
+                .text__card {
+                    font: 400 14px @fontS;
+                    color: #F5F5F5;
+                }
+            }
+        }
+
+        .content__about {
             position: relative;
-            background-color: #080809;
-            padding: 30px;
-            max-width: 268px;
-            box-shadow: 0 0 10px rgba(48, 255, 255, 0.6);
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 45px;
+            
 
             .detail__top {
                 position: absolute;
-                top: 0;
-                left: 0;
-                z-index: 1;
+                top: -77px;
+                left: -21px; 
+                z-index: 1;   
             }
 
             .detail__bottom {
                 position: absolute;
-                bottom: 0;
+                bottom: -85px;
                 right: 0;
+                z-index: 1;
             }
 
-            .photo__card {
+            .text__content {
+                font: 400 18px @fontS;
+                letter-spacing: 1px;
+                text-align: center;
+                color: #F5F5F5;
+                max-width: 402px;
                 position: relative;
                 z-index: 2;
-                margin-bottom: 20px;
-            }
 
-            h3 {
-                font: 600 24px @fontS;
-                color: #F5F5F5;
-                margin-bottom: 5px;
-            }
-
-            .text__card {
-                font: 400 16px @fontS;
-                color: #F5F5F5;
-            }
-        }
-    }
-
-    .content {
-        position: relative;
-        margin-top: 40px;
-        display: flex;
-        justify-content: center;
-
-        .detail__top {
-            position: absolute;
-            top: -77px;
-            left: -21px; 
-            z-index: 1;   
-        }
-
-        .detail__bottom {
-            position: absolute;
-            bottom: -85px;
-            right: 0;
-            z-index: 1;
-        }
-
-        .text__content {
-            font: 400 18px @fontS;
-            letter-spacing: 1px;
-            text-align: center;
-            color: #F5F5F5;
-            max-width: 402px;
-            position: relative;
-            z-index: 2;
-
-            span {
-                color: #30FFFF;
+                span {
+                    color: #30FFFF;
+                }
             }
         }
     }
@@ -217,6 +239,21 @@
         .title {
             margin-bottom: 60px;
         }
+
+        .about__wrapper {
+            flex-direction: row;
+            justify-content: space-evenly;  
+            
+            .cards__about {
+                flex-direction: row;
+            }
+
+            .content__about {
+                margin-left: 30px;                
+            }
+        }
+
+
     }
 }
 
@@ -275,6 +312,16 @@
             margin-right: 6px;  
             margin-bottom: 5px;        
         }
+
+        img {
+            width: 100px;
+        }
+
+        @media screen and (min-width: 768px) {
+            img {
+                width: fit-content;
+            }
+        }
     }
 
     p {
@@ -314,6 +361,7 @@
         }
 
         .message {
+            margin-top: 32px;
             
             textarea {
                 padding: 20px 30px;
@@ -335,6 +383,10 @@
                     font: 400 18px @fontS;
                     color: #4d4d4d;
                 }
+            }
+
+            @media screen and (min-width: 768px) {
+                margin-top: 0;
             }
         }
 
